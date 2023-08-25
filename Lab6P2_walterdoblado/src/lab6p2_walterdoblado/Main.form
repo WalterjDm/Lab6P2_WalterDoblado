@@ -350,6 +350,11 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
           </Events>
         </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jMenuItem2"/>
+          </Properties>
+        </MenuItem>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="jDialog3">
@@ -392,20 +397,20 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jt_nombre" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
                                   <Component id="jScrollPane3" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jTextField3" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
+                                  <Component id="jt_fecha" alignment="0" min="-2" pref="134" max="-2" attributes="0"/>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jRadioButton3" min="-2" pref="98" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton2" min="-2" pref="98" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton1" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="jr_agre" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="jr_rent" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="jr_esta" min="-2" pref="98" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
-                                      <Component id="jTextField8" min="-2" pref="128" max="-2" attributes="0"/>
+                                      <Component id="jt_cant" min="-2" pref="128" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="95" pref="195" max="32767" attributes="0"/>
@@ -426,7 +431,7 @@
                       <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jt_nombre" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
-                          <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jr_esta" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -434,16 +439,16 @@
                               <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jTextField3" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
-                                  <Component id="jTextField8" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                                  <Component id="jt_fecha" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                                  <Component id="jt_cant" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                              <Component id="jr_rent" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                              <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jr_agre" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="137" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="1" attributes="0">
@@ -467,7 +472,7 @@
                 <Property name="text" type="java.lang.String" value="nombre"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField3">
+            <Component class="javax.swing.JTextField" name="jt_fecha">
               <Properties>
                 <Property name="text" type="java.lang.String" value="jTextField3"/>
               </Properties>
@@ -477,12 +482,12 @@
                 <Property name="text" type="java.lang.String" value="jTextField4"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField8">
+            <Component class="javax.swing.JTextField" name="jt_cant">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cantidad"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField8ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jt_cantActionPerformed"/>
               </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane3">
@@ -505,18 +510,21 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Agregar juego"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton4MouseClicked"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+            <Component class="javax.swing.JRadioButton" name="jr_esta">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nuevo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+            <Component class="javax.swing.JRadioButton" name="jr_rent">
               <Properties>
                 <Property name="text" type="java.lang.String" value="es rentable"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+            <Component class="javax.swing.JRadioButton" name="jr_agre">
               <Properties>
                 <Property name="text" type="java.lang.String" value="esta agregado"/>
               </Properties>

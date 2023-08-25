@@ -59,18 +59,19 @@ public class Main extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jPopupMenu1 = new javax.swing.JPopupMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jDialog3 = new javax.swing.JDialog();
         jPanel4 = new javax.swing.JPanel();
         jt_nombre = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        jt_fecha = new javax.swing.JTextField();
         jt_preciojue = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        jt_cant = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         jt_des = new javax.swing.JTextArea();
         jButton4 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        jr_esta = new javax.swing.JRadioButton();
+        jr_rent = new javax.swing.JRadioButton();
+        jr_agre = new javax.swing.JRadioButton();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jt_consolas = new javax.swing.JTable();
@@ -316,18 +317,21 @@ public class Main extends javax.swing.JFrame {
         });
         jPopupMenu1.add(jMenuItem1);
 
+        jMenuItem2.setText("jMenuItem2");
+        jPopupMenu1.add(jMenuItem2);
+
         jPanel4.setBackground(new java.awt.Color(51, 51, 51));
 
         jt_nombre.setText("nombre");
 
-        jTextField3.setText("jTextField3");
+        jt_fecha.setText("jTextField3");
 
         jt_preciojue.setText("jTextField4");
 
-        jTextField8.setText("Cantidad");
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        jt_cant.setText("Cantidad");
+        jt_cant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                jt_cantActionPerformed(evt);
             }
         });
 
@@ -337,12 +341,17 @@ public class Main extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jt_des);
 
         jButton4.setText("Agregar juego");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
 
-        jRadioButton1.setText("Nuevo");
+        jr_esta.setText("Nuevo");
 
-        jRadioButton2.setText("es rentable");
+        jr_rent.setText("es rentable");
 
-        jRadioButton3.setText("esta agregado");
+        jr_agre.setText("esta agregado");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -355,17 +364,17 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jt_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(97, 97, 97)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jRadioButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jr_agre, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jr_rent, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jr_esta, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(89, 89, 89)
-                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jt_cant, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(95, 195, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jt_preciojue, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -379,21 +388,21 @@ public class Main extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jt_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jRadioButton1))
+                    .addComponent(jr_esta))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(33, 33, 33)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jt_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jt_cant, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton2)
+                        .addComponent(jr_rent)
                         .addGap(51, 51, 51)
-                        .addComponent(jRadioButton3)
+                        .addComponent(jr_agre)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
@@ -643,9 +652,20 @@ public class Main extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jMenuItem1MouseClicked
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void jt_cantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_cantActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_jt_cantActionPerformed
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        // TODO add your handling code here:
+        int seleccion = jt_consolas.getSelectedRow();
+        
+        consolas.get(seleccion).getJuegos().add(new Juego(jt_nombre.getText(), jt_des.getText(), jt_fecha.getText(), Integer.parseInt(jt_preciojue.getText()), jr_esta.isSelected(),jr_rent.isSelected(), jr_agre.isSelected(), Integer.parseInt(jt_cant.getText())));
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton4MouseClicked
  public void entraresta() {////////////////
         
         jDialog2.pack();
@@ -716,30 +736,31 @@ ArrayList <Consola> consolas= new ArrayList();
     private javax.swing.JDialog jDialog3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPopupMenu jPopupMenu1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JButton jb_portatil;
     private javax.swing.JRadioButton jb_si;
     private javax.swing.JList<String> jl_juegos;
+    private javax.swing.JRadioButton jr_agre;
+    private javax.swing.JRadioButton jr_esta;
+    private javax.swing.JRadioButton jr_rent;
     private javax.swing.JTextField jt_almacen;
     private javax.swing.JTextField jt_añoUso;
     private javax.swing.JTextField jt_añoUso1;
     private javax.swing.JTextField jt_bateria;
+    private javax.swing.JTextField jt_cant;
     private javax.swing.JTable jt_consolas;
     private javax.swing.JTextArea jt_des;
     private javax.swing.JTextField jt_fabri;
     private javax.swing.JTextField jt_fabri1;
+    private javax.swing.JTextField jt_fecha;
     private javax.swing.JTextField jt_id;
     private javax.swing.JTextField jt_id1;
     private javax.swing.JTextField jt_juegosDis;

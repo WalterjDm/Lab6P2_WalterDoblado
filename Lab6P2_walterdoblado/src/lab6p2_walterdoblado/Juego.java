@@ -8,7 +8,7 @@ public class Juego {
    
     private String nombre;
     private String des;
-    private Date fecha;
+    private String fecha;
     private int preciojue;
     private boolean estado;
     private boolean rentable;
@@ -18,7 +18,7 @@ public class Juego {
     public Juego() {
     }
 
-    public Juego(String nombre, String des, Date fecha, int preciojue, boolean estado, boolean rentable, boolean agregado, int cantDis) {
+    public Juego(String nombre, String des, String fecha, int preciojue, boolean estado, boolean rentable, boolean agregado, int cantDis) {
         this.nombre = nombre;
         this.des = des;
         this.fecha = fecha;
@@ -45,11 +45,11 @@ public class Juego {
         this.des = des;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
