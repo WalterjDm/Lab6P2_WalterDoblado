@@ -1,6 +1,8 @@
 
 package lab6p2_walterdoblado;
 
+import java.util.ArrayList;
+
 
 public class Consola {
     
@@ -10,7 +12,17 @@ public class Consola {
     protected double precio;
     protected int jueDis;
     protected String modelo;
+    ArrayList<Juego>juegos = new ArrayList();
 
+    public ArrayList<Juego> getJuegos() {
+        return juegos;
+    }
+
+    public void setJuegos(ArrayList<Juego> juegos) {
+        this.juegos = juegos;
+    }
+    
+    
     public Consola() {
     }
 

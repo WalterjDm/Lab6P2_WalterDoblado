@@ -1,16 +1,63 @@
 
 package lab6p2_walterdoblado;
 
+import java.util.ArrayList;
+
 
 public class Portatil extends Consola{
 
+    private String tam;
+    private int bateria;
+    private boolean estuche;
+    
+    
+    
     public Portatil() {
     }
 
-    public Portatil(String id, String fabricante, int años, double precio, int jueDis, String modelo) {
+    public Portatil(String tam, int bateria, boolean estuche, String id, String fabricante, int años, double precio, int jueDis, String modelo) {
         super(id, fabricante, años, precio, jueDis, modelo);
+        this.tam = tam;
+        this.bateria = bateria;
+        this.estuche = estuche;
     }
 
+    public String getTam() {
+        return tam;
+    }
+
+    public void setTam(String tam) {
+        this.tam = tam;
+    }
+
+    public int getBateria() {
+        return bateria;
+    }
+
+    public void setBateria(int bateria) {
+        this.bateria = bateria;
+    }
+
+    public boolean isEstuche() {
+        return estuche;
+    }
+
+    public void setEstuche(boolean estuche) {
+        this.estuche = estuche;
+    }
+
+  
+
+    public ArrayList<Juego> getJuegos() {
+        return juegos;
+    }
+
+    public void setJuegos(ArrayList<Juego> juegos) {
+        this.juegos = juegos;
+    }
+
+    
+    
     public String getId() {
         return id;
     }
