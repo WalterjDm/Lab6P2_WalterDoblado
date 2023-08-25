@@ -4,6 +4,7 @@
  */
 package lab6p2_walterdoblado;
 
+import java.awt.PopupMenu;
 import java.util.ArrayList;
 import javax.swing.JPopupMenu;
 import javax.swing.table.DefaultTableModel;
@@ -44,9 +45,20 @@ public class Main extends javax.swing.JFrame {
         jt_bateria = new javax.swing.JTextField();
         jb_si = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
-        popupMenu1 = new java.awt.PopupMenu();
-        menuItem1 = new java.awt.MenuItem();
         jDialog2 = new javax.swing.JDialog();
+        jPanel3 = new javax.swing.JPanel();
+        jt_id1 = new javax.swing.JTextField();
+        jt_fabri1 = new javax.swing.JTextField();
+        jt_añoUso1 = new javax.swing.JTextField();
+        jt_precio1 = new javax.swing.JTextField();
+        jt_juegosDis1 = new javax.swing.JTextField();
+        jt_model1 = new javax.swing.JTextField();
+        jt_almacen = new javax.swing.JTextField();
+        jt_numCon = new javax.swing.JTextField();
+        jt_tipoconx = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jt_consolas = new javax.swing.JTable();
@@ -176,33 +188,118 @@ public class Main extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        popupMenu1.setLabel("popupMenu1");
-        popupMenu1.addActionListener(new java.awt.event.ActionListener() {
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+
+        jt_id1.setText("ID");
+        jt_id1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                popupMenu1ActionPerformed(evt);
+                jt_id1ActionPerformed(evt);
             }
         });
 
-        menuItem1.setLabel("menuItem1");
-        menuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                menuItem1ActionPerformed(evt);
+        jt_fabri1.setText("Fabricante");
+
+        jt_añoUso1.setText("Años de uso");
+
+        jt_precio1.setText("Precio");
+
+        jt_juegosDis1.setText("Juegos  disponible");
+
+        jt_model1.setText("Modelo");
+
+        jt_almacen.setText("almacenamiento");
+
+        jt_numCon.setText("numero de controles");
+
+        jt_tipoconx.setText("tipo conexion");
+
+        jButton3.setText("agregar");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
             }
         });
-        popupMenu1.add(menuItem1);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jt_juegosDis1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(214, 214, 214)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jt_model1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jt_precio1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jt_fabri1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jt_id1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jt_añoUso1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(204, 204, 204)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jt_numCon, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jt_almacen, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jt_tipoconx, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(234, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(69, 69, 69)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jt_id1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jt_numCon, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jt_fabri1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jt_almacen, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jt_añoUso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jt_tipoconx, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addComponent(jt_precio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jt_juegosDis1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jButton3)))
+                .addGap(12, 12, 12)
+                .addComponent(jt_model1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(156, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
         jDialog2.getContentPane().setLayout(jDialog2Layout);
         jDialog2Layout.setHorizontalGroup(
             jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(jDialog2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jDialog2Layout.setVerticalGroup(
             jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(jDialog2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
+        jMenuItem1.setText("jMenuItem1");
+        jPopupMenu1.add(jMenuItem1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -257,33 +354,38 @@ public class Main extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(176, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jb_portatil)
-                .addGap(93, 93, 93)
-                .addComponent(jButton2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 659, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jb_portatil)
+                        .addGap(81, 81, 81)
+                        .addComponent(jButton2)
+                        .addGap(71, 71, 71)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
+                .addGap(19, 19, 19)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jb_portatil)
-                            .addComponent(jButton2))))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 219, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(84, 84, 84)
+                                .addComponent(jb_portatil))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addGap(93, 93, 93)
+                                .addComponent(jButton2)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -305,27 +407,6 @@ public class Main extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jt_consolasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_consolasMouseClicked
-        // TODO add your handling code here:
-        if (evt.isMetaDown()) {
-            popupMenu1.show(jt_consolas, evt.getX(), evt.getY());
-            
-        }
-        
-    }//GEN-LAST:event_jt_consolasMouseClicked
-
-    private void menuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItem1ActionPerformed
-        // TODO add your handling code here:
-        
-        
-        
-        
-    }//GEN-LAST:event_menuItem1ActionPerformed
-
-    private void popupMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_popupMenu1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_popupMenu1ActionPerformed
 
     private void jb_portatilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_portatilMouseClicked
         // TODO add your handling code here:
@@ -379,6 +460,44 @@ public class Main extends javax.swing.JFrame {
         entraresta();
         
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jt_id1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_id1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jt_id1ActionPerformed
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        
+        DefaultTableModel modelo = (DefaultTableModel) jt_consolas.getModel();
+        Estacionaria e = new Estacionaria(Integer.parseInt(jt_numCon.getText()), Integer.parseInt(jt_almacen.getText()), jt_tipoconx.getText(), jt_id.getText(), jt_fabri.getText(), Integer.parseInt(jt_añoUso.getText()), Double.parseDouble(jt_precio.getText()), Integer.parseInt(jt_precio.getText()), jt_model.getText());
+        consolas.add(e);
+        
+         Object[] datos = new Object[6];
+            datos[0] = e.getId();
+           datos[1] = e.getFabricante();
+           datos[2] = e.getPrecio();
+           datos[3] = e.getJueDis();
+           datos[4] = "Estacionaria";
+           datos[5] = e.getAños();
+            
+            modelo.addRow(datos);
+        
+        jt_consolas.setModel(modelo);
+        
+    }//GEN-LAST:event_jButton3MouseClicked
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formMouseClicked
+
+    private void jt_consolasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_consolasMouseClicked
+        // TODO add your handling code here:
+             if (evt.isMetaDown()) {
+            System.out.println("click derecho");
+            jPopupMenu1.show(jt_consolas, evt.getX(), evt.getY());
+            
+        }
+    }//GEN-LAST:event_jt_consolasMouseClicked
  public void entraresta() {////////////////
         
         jDialog2.pack();
@@ -434,26 +553,37 @@ ArrayList <Consola> consolas= new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton jb_portatil;
     private javax.swing.JRadioButton jb_si;
     private javax.swing.JList<String> jl_juegos;
+    private javax.swing.JTextField jt_almacen;
     private javax.swing.JTextField jt_añoUso;
+    private javax.swing.JTextField jt_añoUso1;
     private javax.swing.JTextField jt_bateria;
     private javax.swing.JTable jt_consolas;
     private javax.swing.JTextField jt_fabri;
+    private javax.swing.JTextField jt_fabri1;
     private javax.swing.JTextField jt_id;
+    private javax.swing.JTextField jt_id1;
     private javax.swing.JTextField jt_juegosDis;
+    private javax.swing.JTextField jt_juegosDis1;
     private javax.swing.JTextField jt_model;
+    private javax.swing.JTextField jt_model1;
+    private javax.swing.JTextField jt_numCon;
     private javax.swing.JTextField jt_precio;
+    private javax.swing.JTextField jt_precio1;
     private javax.swing.JTextField jt_tampan;
-    private java.awt.MenuItem menuItem1;
-    private java.awt.PopupMenu popupMenu1;
+    private javax.swing.JTextField jt_tipoconx;
     // End of variables declaration//GEN-END:variables
 }
