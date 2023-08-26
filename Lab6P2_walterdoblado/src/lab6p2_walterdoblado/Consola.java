@@ -1,18 +1,16 @@
-
 package lab6p2_walterdoblado;
 
 import java.util.ArrayList;
 
-
 public class Consola {
-    
+
     protected String id;
     protected String fabricante;
     protected int años;
     protected double precio;
     protected int jueDis;
     protected String modelo;
-    ArrayList<Juego>juegos = new ArrayList();
+    ArrayList<Juego> juegos = new ArrayList();
 
     public ArrayList<Juego> getJuegos() {
         return juegos;
@@ -21,8 +19,7 @@ public class Consola {
     public void setJuegos(ArrayList<Juego> juegos) {
         this.juegos = juegos;
     }
-    
-    
+
     public Consola() {
     }
 
@@ -87,9 +84,5 @@ public class Consola {
     public String toString() {
         return "Consola{" + "id=" + id + ", fabricante=" + fabricante + ", a\u00f1os=" + años + ", precio=" + precio + ", jueDis=" + jueDis + ", modelo=" + modelo + '}';
     }
-    
-    
-    
-    
-    
+
 }

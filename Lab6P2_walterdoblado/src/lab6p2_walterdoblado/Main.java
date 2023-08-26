@@ -767,9 +767,9 @@ public class Main extends javax.swing.JFrame {
         jDialog1.setVisible(false);
 
         JOptionPane.showMessageDialog(jDialog1, "consola portatil agregada exitosamente");
-jt_bateria.setText("");
-jt_tampan.setText("");
-jt_id.setText("");
+        jt_bateria.setText("");
+        jt_tampan.setText("");
+        jt_id.setText("");
 
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -858,17 +858,13 @@ jt_id.setText("");
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
- int seleccion = jt_consolas.getSelectedRow();
-               
-                
-                
-            
+        int seleccion = jt_consolas.getSelectedRow();
+
         DefaultListModel modeloLista = (DefaultListModel) jl_juegos.getModel();
-DefaultTableModel modelo = (DefaultTableModel) jt_consolas.getModel();
-modeloLista.removeAllElements();
+        DefaultTableModel modelo = (DefaultTableModel) jt_consolas.getModel();
+        modeloLista.removeAllElements();
         if (seleccion >= 0) {
-           
-            
+
             consolas.get(seleccion).getJuegos();
             String nombre = consolas.get(seleccion).getJuegos().get(seleccion).getNombre();
             int precio = consolas.get(seleccion).getJuegos().get(seleccion).getPreciojue();
@@ -878,7 +874,7 @@ modeloLista.removeAllElements();
             Juego j = new Juego(nombre, precio, estado, cant);
             modeloLista.addElement(j);
             jl_juegos.setModel(modeloLista);
-           
+
         } else {
             JOptionPane.showMessageDialog(null, "No ha seleccionado una fila", "AVISO", JOptionPane.WARNING_MESSAGE);
         }
@@ -893,8 +889,7 @@ modeloLista.removeAllElements();
         DefaultListModel modeloLista = (DefaultListModel) jl_juegos.getModel();
 
         if (seleccion >= 0) {
-           
-            
+
             consolas.get(seleccion).getJuegos();
             String nombre = consolas.get(seleccion).getJuegos().get(seleccion).getNombre();
             int precio = consolas.get(seleccion).getJuegos().get(seleccion).getPreciojue();
@@ -918,15 +913,15 @@ modeloLista.removeAllElements();
         // TODO add your handling code here:
         int seleccion = jt_consolas.getSelectedRow();
         DefaultTableModel modelo = (DefaultTableModel) jt_consolas.getModel();
-        
+
         if (seleccion >= 0) {
-           
+
             modelo.removeRow(seleccion);
-        
+
         } else {
             JOptionPane.showMessageDialog(null, "No ha seleccionado una fila", "AVISO", JOptionPane.WARNING_MESSAGE);
         }
-        
+
     }//GEN-LAST:event_jMenuItem3ActionPerformed
     public void entraresta() {////////////////
 

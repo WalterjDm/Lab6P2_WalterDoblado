@@ -1,11 +1,9 @@
-
 package lab6p2_walterdoblado;
 
 import java.util.Date;
 
-
 public class Juego {
-   
+
     private String nombre;
     private String des;
     private String fecha;
@@ -35,7 +33,6 @@ public class Juego {
         this.estado = estado;
         this.cantDis = cantDis;
     }
-    
 
     public String getNombre() {
         return nombre;
@@ -103,13 +100,9 @@ public class Juego {
 
     @Override
     public String toString() {
-        return "Juego{" + "nombre=" + nombre +  " "
+        return "Juego{" + "nombre=" + nombre + " "
                 + "\n precio: " + preciojue + " estado " + estado + ""
-                + "\n rentable " + rentable + ", cantidad disponible: " + cantDis ;
+                + "\n rentable " + rentable + ", cantidad disponible: " + cantDis;
     }
-    
-    
-    
-    
-    
+
 }

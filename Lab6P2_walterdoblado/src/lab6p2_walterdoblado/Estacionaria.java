@@ -7,8 +7,7 @@ public class Estacionaria extends Consola {
     private int numContr;
     private int almacen;
     private String tipConex;
-    
-    
+
     public Estacionaria() {
     }
 
@@ -43,9 +42,6 @@ public class Estacionaria extends Consola {
         this.tipConex = tipConex;
     }
 
-    
-  
-
     public ArrayList<Juego> getJuegos() {
         return juegos;
     }
@@ -54,8 +50,6 @@ public class Estacionaria extends Consola {
         this.juegos = juegos;
     }
 
-    
-    
     public String getId() {
         return id;
     }

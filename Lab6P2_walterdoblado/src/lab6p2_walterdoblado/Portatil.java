@@ -1,17 +1,13 @@
-
 package lab6p2_walterdoblado;
 
 import java.util.ArrayList;
 
-
-public class Portatil extends Consola{
+public class Portatil extends Consola {
 
     private String tam;
     private int bateria;
     private boolean estuche;
-    
-    
-    
+
     public Portatil() {
     }
 
@@ -46,8 +42,6 @@ public class Portatil extends Consola{
         this.estuche = estuche;
     }
 
-  
-
     public ArrayList<Juego> getJuegos() {
         return juegos;
     }
@@ -56,8 +50,6 @@ public class Portatil extends Consola{
         this.juegos = juegos;
     }
 
-    
-    
     public String getId() {
         return id;
     }
@@ -110,8 +102,5 @@ public class Portatil extends Consola{
     public String toString() {
         return "Portatil{" + '}';
     }
-    
-    
-    
-    
+
 }
