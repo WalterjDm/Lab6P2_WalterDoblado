@@ -6,6 +6,8 @@ package lab6p2_walterdoblado;
 
 import java.awt.PopupMenu;
 import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
 import javax.swing.table.DefaultTableModel;
 
@@ -317,7 +319,17 @@ public class Main extends javax.swing.JFrame {
         });
         jPopupMenu1.add(jMenuItem1);
 
-        jMenuItem2.setText("jMenuItem2");
+        jMenuItem2.setText("agregar lista");
+        jMenuItem2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem2MouseClicked(evt);
+            }
+        });
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jPopupMenu1.add(jMenuItem2);
 
         jPanel4.setBackground(new java.awt.Color(51, 51, 51));
@@ -576,10 +588,9 @@ public class Main extends javax.swing.JFrame {
         
         jt_consolas.setModel(modelo);
         
-        System.out.println("ahorita llegue ");
+       jDialog1.setVisible(false);
         
-        
-        
+         JOptionPane.showMessageDialog(jDialog1, "consola portatil agregada exitosamente");
         
         
     }//GEN-LAST:event_jButton1MouseClicked
@@ -616,7 +627,8 @@ public class Main extends javax.swing.JFrame {
             modelo.addRow(datos);
         
         jt_consolas.setModel(modelo);
-        
+         jDialog2.setVisible(true);
+          JOptionPane.showMessageDialog(jDialog2, "consola estacionaria  agregada exitosamente");
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
@@ -626,7 +638,7 @@ public class Main extends javax.swing.JFrame {
     private void jt_consolasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_consolasMouseClicked
         // TODO add your handling code here:
              if (evt.isMetaDown()) {
-            System.out.println("click derecho");
+            
             jPopupMenu1.show(jt_consolas, evt.getX(), evt.getY());
             
         }
@@ -635,20 +647,14 @@ public class Main extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         
-        
+         entrarjuego();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
         // TODO add your handling code here:
         
         entrarjuego();
-        
-        
-        
-        
-        
-        
-        
+ 
         
     }//GEN-LAST:event_jMenuItem1MouseClicked
 
@@ -663,9 +669,26 @@ public class Main extends javax.swing.JFrame {
         consolas.get(seleccion).getJuegos().add(new Juego(jt_nombre.getText(), jt_des.getText(), jt_fecha.getText(), Integer.parseInt(jt_preciojue.getText()), jr_esta.isSelected(),jr_rent.isSelected(), jr_agre.isSelected(), Integer.parseInt(jt_cant.getText())));
         
         
-        
-        
+         jDialog3.setVisible(true);
+        JOptionPane.showMessageDialog(jDialog3, "juego agregado exitosamente");
     }//GEN-LAST:event_jButton4MouseClicked
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem2MouseClicked
+        // TODO add your handling code here:
+        
+        int seleccion = jt_consolas.getSelectedRow();
+        DefaultTableModel modelo = (DefaultTableModel) jt_consolas.getModel();
+        DefaultListModel modeloLista = (DefaultListModel) jl_juegos.getModel();
+        
+            
+        
+        
+        
+    }//GEN-LAST:event_jMenuItem2MouseClicked
  public void entraresta() {////////////////
         
         jDialog2.pack();
