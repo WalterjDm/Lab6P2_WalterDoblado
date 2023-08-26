@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
  * @author walter
  */
 public class Main extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Main
      */
@@ -576,7 +576,7 @@ public class Main extends javax.swing.JFrame {
         
         jt_consolas.setModel(modelo);
         
-        
+        System.out.println("ahorita llegue ");
         
         
         
