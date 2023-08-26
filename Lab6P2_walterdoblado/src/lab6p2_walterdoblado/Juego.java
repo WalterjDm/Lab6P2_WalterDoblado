@@ -29,6 +29,14 @@ public class Juego {
         this.cantDis = cantDis;
     }
 
+    public Juego(String nombre, int preciojue, boolean estado, int cantDis) {
+        this.nombre = nombre;
+        this.preciojue = preciojue;
+        this.estado = estado;
+        this.cantDis = cantDis;
+    }
+    
+
     public String getNombre() {
         return nombre;
     }

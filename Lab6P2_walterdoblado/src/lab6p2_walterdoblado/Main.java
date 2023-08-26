@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
  * @author walter
  */
 public class Main extends javax.swing.JFrame {
-    
+
     /**
      * Creates new form Main
      */
@@ -555,7 +555,7 @@ public class Main extends javax.swing.JFrame {
 
     private void jb_portatilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_portatilMouseClicked
         // TODO add your handling code here:
-        
+
         entrarportatil();
     }//GEN-LAST:event_jb_portatilMouseClicked
 
@@ -569,30 +569,29 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        
-        
+
         DefaultTableModel modelo = (DefaultTableModel) jt_consolas.getModel();
-        
-        Portatil p = new Portatil(jt_tampan.getText(), Integer.parseInt(jt_bateria.getText()),jb_si.isSelected(), jt_id.getText(), jt_fabri.getText(), Integer.parseInt(jt_añoUso.getText()), Double.parseDouble(jt_precio.getText()), Integer.parseInt(jt_precio.getText()), jt_model.getText());
+
+        Portatil p = new Portatil(jt_tampan.getText(), Integer.parseInt(jt_bateria.getText()), jb_si.isSelected(), jt_id.getText(), jt_fabri.getText(), Integer.parseInt(jt_añoUso.getText()), Double.parseDouble(jt_precio.getText()), Integer.parseInt(jt_precio.getText()), jt_model.getText());
         consolas.add(p);
-        
-    Object[] datos = new Object[6];
-            datos[0] = p.getId();
-           datos[1] = p.getFabricante();
-           datos[2] = p.getPrecio();
-           datos[3] = p.getJueDis();
-           datos[4] = "portatil";
-           datos[5] = p.getAños();
-            
-            modelo.addRow(datos);
-        
+
+        Object[] datos = new Object[6];
+        datos[0] = p.getId();
+        datos[1] = p.getFabricante();
+        datos[2] = p.getPrecio();
+        datos[3] = p.getJueDis();
+        datos[4] = "portatil";
+        datos[5] = p.getAños();
+
+        modelo.addRow(datos);
+
         jt_consolas.setModel(modelo);
-        
-       jDialog1.setVisible(false);
-        
-         JOptionPane.showMessageDialog(jDialog1, "consola portatil agregada exitosamente");
-        
-        
+
+        jDialog1.setVisible(false);
+
+        JOptionPane.showMessageDialog(jDialog1, "consola portatil agregada exitosamente");
+
+
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -602,7 +601,7 @@ public class Main extends javax.swing.JFrame {
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
         entraresta();
-        
+
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jt_id1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_id1ActionPerformed
@@ -611,24 +610,24 @@ public class Main extends javax.swing.JFrame {
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
         // TODO add your handling code here:
-        
+
         DefaultTableModel modelo = (DefaultTableModel) jt_consolas.getModel();
         Estacionaria e = new Estacionaria(Integer.parseInt(jt_numCon.getText()), Integer.parseInt(jt_almacen.getText()), jt_tipoconx.getText(), jt_id.getText(), jt_fabri.getText(), Integer.parseInt(jt_añoUso.getText()), Double.parseDouble(jt_precio.getText()), Integer.parseInt(jt_precio.getText()), jt_model.getText());
         consolas.add(e);
-        
-         Object[] datos = new Object[6];
-            datos[0] = e.getId();
-           datos[1] = e.getFabricante();
-           datos[2] = e.getPrecio();
-           datos[3] = e.getJueDis();
-           datos[4] = "Estacionaria";
-           datos[5] = e.getAños();
-            
-            modelo.addRow(datos);
-        
+
+        Object[] datos = new Object[6];
+        datos[0] = e.getId();
+        datos[1] = e.getFabricante();
+        datos[2] = e.getPrecio();
+        datos[3] = e.getJueDis();
+        datos[4] = "Estacionaria";
+        datos[5] = e.getAños();
+
+        modelo.addRow(datos);
+
         jt_consolas.setModel(modelo);
-         jDialog2.setVisible(true);
-          JOptionPane.showMessageDialog(jDialog2, "consola estacionaria  agregada exitosamente");
+        jDialog2.setVisible(true);
+        JOptionPane.showMessageDialog(jDialog2, "consola estacionaria  agregada exitosamente");
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
@@ -637,25 +636,25 @@ public class Main extends javax.swing.JFrame {
 
     private void jt_consolasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_consolasMouseClicked
         // TODO add your handling code here:
-             if (evt.isMetaDown()) {
-            
+        if (evt.isMetaDown()) {
+
             jPopupMenu1.show(jt_consolas, evt.getX(), evt.getY());
-            
+
         }
     }//GEN-LAST:event_jt_consolasMouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        
-         entrarjuego();
+
+        entrarjuego();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
         // TODO add your handling code here:
-        
+
         entrarjuego();
- 
-        
+
+
     }//GEN-LAST:event_jMenuItem1MouseClicked
 
     private void jt_cantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_cantActionPerformed
@@ -665,55 +664,75 @@ public class Main extends javax.swing.JFrame {
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
         // TODO add your handling code here:
         int seleccion = jt_consolas.getSelectedRow();
-        
-        consolas.get(seleccion).getJuegos().add(new Juego(jt_nombre.getText(), jt_des.getText(), jt_fecha.getText(), Integer.parseInt(jt_preciojue.getText()), jr_esta.isSelected(),jr_rent.isSelected(), jr_agre.isSelected(), Integer.parseInt(jt_cant.getText())));
-        
-        
-         jDialog3.setVisible(true);
-        JOptionPane.showMessageDialog(jDialog3, "juego agregado exitosamente");
+
+        System.out.println(seleccion);
+        if (seleccion >= 0) {
+
+            consolas.get(seleccion).getJuegos().add(new Juego(jt_nombre.getText(), jt_des.getText(), jt_fecha.getText(), Integer.parseInt(jt_preciojue.getText()), jr_esta.isSelected(), jr_rent.isSelected(), jr_agre.isSelected(), Integer.parseInt(jt_cant.getText())));
+
+            jDialog3.setVisible(true);
+            JOptionPane.showMessageDialog(jDialog3, "juego agregado exitosamente");
+        } else {
+            JOptionPane.showMessageDialog(null, "No ha seleccionado una fila", "AVISO", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
+
+
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem2MouseClicked
         // TODO add your handling code here:
-        
+
         int seleccion = jt_consolas.getSelectedRow();
-        DefaultTableModel modelo = (DefaultTableModel) jt_consolas.getModel();
+
         DefaultListModel modeloLista = (DefaultListModel) jl_juegos.getModel();
-        
-            
-        
-        
-        
+
+        if (seleccion >= 0) {
+            System.out.println("si");
+            consolas.get(seleccion).getJuegos();
+            String nombre = consolas.get(seleccion).getJuegos().get(seleccion).getNombre();
+            int precio = consolas.get(seleccion).getJuegos().get(seleccion).getPreciojue();
+            boolean estado = consolas.get(seleccion).getJuegos().get(seleccion).isEstado();
+            int cant = consolas.get(seleccion).getJuegos().get(seleccion).getCantDis();
+
+            Juego j = new Juego(nombre, precio, estado, cant);
+            modeloLista.addElement(j);
+            jl_juegos.setModel(modeloLista);
+
+        } else {
+            JOptionPane.showMessageDialog(null, "No ha seleccionado una fila", "AVISO", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_jMenuItem2MouseClicked
- public void entraresta() {////////////////
-        
+    public void entraresta() {////////////////
+
         jDialog2.pack();
-       jDialog2.setModal(true);
+        jDialog2.setModal(true);
         jDialog2.setLocationRelativeTo(this);
         jDialog2.setVisible(true);
 
     }
- public void entrarjuego() {////////////////
-        
+
+    public void entrarjuego() {////////////////
+
         jDialog3.pack();
-       jDialog3.setModal(true);
+        jDialog3.setModal(true);
         jDialog3.setLocationRelativeTo(this);
         jDialog3.setVisible(true);
 
     }
-    
-     public void entrarportatil() {////////////////
-        
+
+    public void entrarportatil() {////////////////
+
         jDialog1.pack();
-       jDialog1.setModal(true);
+        jDialog1.setModal(true);
         jDialog1.setLocationRelativeTo(this);
         jDialog1.setVisible(true);
 
     }
+
     /**
      * @param args the command line arguments
      */
@@ -748,7 +767,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
     }
-ArrayList <Consola> consolas= new ArrayList();
+    ArrayList<Consola> consolas = new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
